@@ -2,13 +2,6 @@
 
 :root {
   --blanc: #f1f9f8;
-  --degrade: linear-gradient(
-    90deg,
-    rgba(137, 206, 221, 1) 0%,
-    rgba(32, 158, 146, 1) 37%,
-    rgba(143, 99, 160, 1) 70%,
-    rgba(132, 57, 158, 1) 100%
-  );
 }
 
 * {
@@ -37,9 +30,11 @@ header {
   align-items: center;
   height: 100px;
   width: 100%;
+  z-index: 1;
 }
 
 .barreheader {
+  width: 660px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,16 +52,16 @@ header {
   background: rgba(145, 145, 145, 0.5);
 }
 
-h1 {
+/* h1 {
   font-family: "Righteous", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
   color: var(--blanc);
   margin: 0 46px;
-}
+} */
 
-h2 {
+h1 {
   border-left: solid 3px white;
   margin: 0 15%;
   padding: 0 20px;
@@ -78,14 +73,25 @@ h2 {
   border-bottom: solid 2px #f1f9f8;
 }
 
-h3 {
+h2 {
   color: #1c141f;
   font-size: 3rem;
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #1c141f;
+  font-size: 2rem;
+  border-bottom: solid 1px #1c141f;
+  margin-bottom: 10px;
 }
 
 h4 {
   color: #1c141f;
+  font-size: 3rem;
+  margin-top: 120px;
+  margin-bottom: 70px;
 }
 
 p {
@@ -96,7 +102,8 @@ p {
 nav {
   display: flex;
   align-items: center;
-  width: 300px;
+  margin-left: 25px;
+  width: 560px;
   height: 100%;
 }
 
@@ -121,7 +128,7 @@ li {
 
 .fa-moon {
   font-size: 2rem;
-  margin: 0 50px;
+  margin-right: 25px;
   transition: transform 0.5s ease;
 }
 
@@ -136,7 +143,7 @@ li {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 1000px;
+  height: 100%;
 }
 
 li a {
@@ -155,21 +162,25 @@ li a:hover {
 
 .fa-moon:hover {
   transform: rotate(-15deg);
+  cursor: pointer;
 }
 
 .carouseldesc {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  width: 90%;
   margin-top: 50px;
+  gap: 20px;
 }
 
 .carousel {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 35%;
   height: 400px;
   position: relative;
+  z-index: 0;
 }
 
 .imgcontainer {
@@ -180,6 +191,7 @@ li a:hover {
   position: relative;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  animation: float 10s ease-in-out infinite;
 }
 
 .imgcontainer img {
@@ -199,6 +211,7 @@ li a:hover {
 .gauche,
 .droite {
   display: flex;
+  justify-content: center;
   align-content: center;
   height: 50px;
   color: black;
@@ -206,6 +219,14 @@ li a:hover {
   cursor: pointer;
   position: absolute;
   z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.gauche:hover {
+  transform: translateX(-25%);
+}
+.droite:hover {
+  transform: translateX(25%);
 }
 
 .gauche {
@@ -214,6 +235,205 @@ li a:hover {
 
 .droite {
   right: 10px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 60%;
+  padding-left: 7%;
+  display: none;
+}
+
+.description p {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  text-align: end;
+}
+
+.description.descactive {
+  display: flex;
+}
+
+#mescompetences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 742px;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.competences {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  height: 180px;
+}
+
+#html,
+#css,
+#js {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+#html:hover {
+  i {
+    color: #e54c21;
+  }
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#css:hover {
+  i {
+    color: #2596be;
+  }
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#js:hover {
+  i {
+    color: #f7df1d;
+  }
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#html i,
+#css i,
+#js i {
+  font-size: 5rem;
+  color: #1c141f;
+}
+
+#mesprojets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 742px;
+}
+
+.gallery {
+  display: flex;
+  gap: 50px;
+}
+
+.article {
+  width: 500px;
+  height: 400px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.article:hover {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.article img {
+  object-fit: cover;
+  object-position: top;
+  height: 60%;
+  width: 100%;
+  border-radius: 50px 50px 0 0;
+}
+
+h5 {
+  color: #1c141f;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contenu_nb {
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+h6 {
+  margin-top: 100px;
+  color: #1c141f;
+  font-size: 3rem;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 742px;
+}
+
+.btndownload {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1c141f;
+  padding: 8px 10px;
+  /* border: solid 2px #1c141f; */
+  border-radius: 50px;
+  margin: 20px 0;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease;
+}
+
+.btndownload:hover {
+  /* background: rgb(92, 106, 113); */
+  /* background: linear-gradient(
+    95deg,
+    rgba(92, 106, 113, 0.2) 0%,
+    rgba(118, 111, 117, 0.2) 100%
+  ); */
+  box-shadow: 0px 0px 20px 0px rgba(156, 89, 187, 0.8);
+}
+
+.btndownload i {
+  color: #1c141f;
+  padding: 0 10px;
+}
+
+.formulaire {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.formulaire label {
+  font-size: 1.3rem;
+  color: #1c141f;
+}
+
+.formulaire input,
+.formulaire textarea {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50px;
+  color: #1c141f;
+  padding: 10px 20px;
+}
+
+.reseaux a i {
+  color: #1c141f;
 }
 
 /* Animations */
@@ -226,5 +446,23 @@ li a:hover {
   100% {
     transform: scaleX(1);
     opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(2deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }

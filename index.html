@@ -9,50 +9,142 @@
       src="https://kit.fontawesome.com/f0e84571e0.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <video autoplay muted loop id="background-video">
-      <source src="media\199015-909322188_small.webm" type="video/webm" />
+      <source src="media\background.webm" type="video/webm" />
     </video>
     <header>
       <div class="barreheader">
-        <h1><a href="">LC.</a></h1>
+        <!-- <h1><a href="">LC.</a></h1> -->
         <nav>
           <ul>
             <li><a href="#Apropos">A propos de moi</a></li>
-            <li><a href="">Mes projets</a></li>
+            <li><a href="#mescompetences">Compétences</a></li>
+            <li><a href="#mesprojets">Projets</a></li>
+            <li id="mecontacter"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <i class="fa-solid fa-moon"></i>
+        <input type="checkbox" name="darkmode" id="darkmode" hidden />
+        <label for="darkmode"><i class="fa-solid fa-moon"></i></label>
       </div>
     </header>
     <main>
       <div class="hautdepage">
-        <h2>
+        <h1>
           Salut, je m'appelle <span>Lucas</span>, <br />
-          mais vous pouvez m'appeler <a href="" class="ici">ici</a>
-        </h2>
+          mais vous pouvez m'appeler <a href="#contact" class="ici">ici</a>
+        </h1>
       </div>
       <section id="Apropos">
-        <h3>Faisons connaissance</h3>
-        <p>Je m'appelle Lucas Carpentier</p>
+        <h2>Faisons connaissance</h2>
+        <p>Enchanté, Lucas Carpentier, 24 ans</p>
         <div class="carouseldesc">
           <div class="carousel">
             <i class="fa-solid fa-arrow-left gauche"></i>
             <div class="imgcontainer">
               <img src="media\moipro.jpg" alt="" id="1" class="active" />
-              <img src="media\moiconcert.PNG" alt="" id="2" />
+              <img src="media\moiconcert.png" alt="" id="2" />
             </div>
             <i class="fa-solid fa-arrow-right droite"></i>
           </div>
-          <div class="description1 active">
-            <h4>Bla bla</h4>
+          <div class="description descactive" id="desc1">
+            <h3>Développeur Web</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-              corporis?
+              Actuellement en formation au GRETA pour obtenir un TP Developpeur
+              Web et Web Mobile, je me suis pris de passion pour ce domaine.
+              <br />
+              Etant tout les jours sur un ordinateur depuis mon plus jeune âge,
+              ça aide.
             </p>
           </div>
+          <div class="description" id="desc2">
+            <h3>Artiste</h3>
+            <p>
+              Egalement passionné de musique, j'aime composer et chanter depuis
+              maintenant 7 ans.
+              <br />
+              J'utilise FL Studio pour créer, mixer, masteriser mes titres.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="mescompetences">
+        <h4>Mes compétences</h4>
+        <div class="competences">
+          <div id="html">
+            <i class="fa-brands fa-html5"></i>
+            <p>HTML</p>
+          </div>
+          <div id="css">
+            <i class="fa-brands fa-css3-alt"></i>
+            <p>CSS</p>
+          </div>
+          <div id="js">
+            <i class="fa-brands fa-square-js"></i>
+            <p>JavaScript</p>
+          </div>
+        </div>
+      </section>
+      <section id="mesprojets">
+        <h4>Mes projets</h4>
+        <div class="gallery">
+          <a href="https://lcss24.github.io/NextBeat/" target="_blank">
+            <article id="nextbeat" class="article">
+              <img src="media\nextbeat.png" alt="" />
+              <div class="contenu_nb">
+                <h5>Next Beat</h5>
+                <p>
+                  Un "tinder-like" pour donner son avis sur des artistes en
+                  cliquant sur "j'aime" ou "je n'aime pas", connecté à l'API
+                  Spotify.
+                </p>
+              </div>
+            </article>
+          </a>
+          <a href="#mesprojets">
+            <article id="sitetiff" class="article">
+              <img src="media\tiffanysart.png" alt="" />
+              <div class="contenu_nb">
+                <h5>Tiffany's Art</h5>
+                <p>Site vitrine pour une photographe (WIP)</p>
+              </div>
+            </article>
+          </a>
+        </div>
+      </section>
+      <section id="contact">
+        <h6>Ca vous a plu ?</h6>
+        <a
+          href=""
+          class="btndownload"
+          target="_blank"
+          download=".\media\wip.jpg"
+          ><i class="fa-solid fa-circle-down"></i>Téléchargez mon CV</a
+        >
+        <p>et rentrons en contact</p>
+        <form
+          action="mailto:lucas.carpentier24@gmail.com"
+          method="post"
+          enctype="text/plain"
+          class="formulaire"
+        >
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+        <div class="reseaux">
+          <a href="https://fr.linkedin.com/in/lucascarpentier24" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/LCSS24" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
       </section>
     </main>
