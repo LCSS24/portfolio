@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/f0e84571e0.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <video autoplay muted loop id="background-video">
@@ -141,22 +141,26 @@
           <button type="submit">Envoyer</button>
         </form> -->
         <div class="reseaux">
-          <a href="https://fr.linkedin.com/in/lucascarpentier24" target="_blank"
+          <a
+            id="lkdin"
+            href="https://fr.linkedin.com/in/lucascarpentier24"
+            target="_blank"
             ><i class="fa-brands fa-linkedin"></i>
             <p>LinkedIn</p>
           </a>
-          <a href="https://github.com/LCSS24" target="_blank"
-            ><i class="fa-brands fa-github"></i>
-            <p>Github</p></a
-          >
-          <a href="https://discord.com/users/178433935309537280">
+          <a id="github" href="https://github.com/LCSS24" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <p>Github</p>
+          </a>
+          <a id="discord" href="https://discord.com/users/178433935309537280">
             <i class="fa-brands fa-discord"></i>
             <p>Discord</p>
           </a>
-            <form action="mailto:lucas.carpentier24@gmail.com"></form>
+          <button id="mail" value="lucas.carpentier24@gmail.com">
             <i class="fa-solid fa-envelope"></i>
             <p>Mail</p>
-          </a>
+          </button>
+          <p id="mailcopie">Copié dans le presse papier !</p>
         </div>
       </section>
     </main>

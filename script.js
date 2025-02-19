@@ -34,9 +34,42 @@ function carouselDesc() {
   });
 }
 
+async function btnMail() {
+  const btn = document.getElementById("mail");
+  btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(btn.value);
+    afficherMessage();
+  });
+}
+
+function afficherMessage() {
+  const message = document.getElementById("mailcopie");
+  message.classList.add("ok");
+
+  setTimeout(() => {
+    message.classList.remove("ok");
+  }, 2000);
+}
+
+// function smoothScroll() {
+//   document.addEventListener(
+//     "wheel",
+//     (event) => {
+//       event.preventDefault(); // Empêche le scroll brut par défaut
+//       window.scrollBy({
+//         top: event.deltaY * 2 // Ajuste la vitesse du scroll
+//         behavior: "smooth", // Rend le scroll fluide
+//       });
+//     },
+//     { passive: false }
+//   ); // Permet de bloquer le comportement par défaut
+// }
+
 function main() {
+  smoothScroll();
   carouselDesc();
   headerScroll();
+  btnMail();
 }
 
 document.addEventListener("DOMContentLoaded", main);
