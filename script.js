@@ -51,19 +51,19 @@ function afficherMessage() {
   }, 2000);
 }
 
-function smoothScroll() {
-  document.addEventListener(
-    "wheel",
-    (event) => {
-      event.preventDefault(); // Empêche le scroll brut par défaut
-      window.scrollBy({
-        top: event.deltaY * 2, // Ajuste la vitesse du scroll
-        behavior: "smooth", // Rend le scroll fluide
-      });
-    },
-    { passive: false }
-  ); // Permet de bloquer le comportement par défaut
-}
+// function smoothScroll() {
+//   document.addEventListener(
+//     "wheel",
+//     (event) => {
+//       event.preventDefault(); // Empêche le scroll brut par défaut
+//       window.scrollBy({
+//         top: event.deltaY * 2, // Ajuste la vitesse du scroll
+//         behavior: "smooth", // Rend le scroll fluide
+//       });
+//     },
+//     { passive: false }
+//   ); // Permet de bloquer le comportement par défaut
+// }
 
 function navActive() {
   const sections = document.querySelectorAll("section");
@@ -84,7 +84,7 @@ function navActive() {
 
 function main() {
   navActive();
-  smoothScroll();
+  // smoothScroll();
   carouselDesc();
   headerScroll();
   btnMail();
