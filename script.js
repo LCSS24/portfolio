@@ -3,11 +3,16 @@ function headerScroll() {
     const header = document.querySelector(".barreheader");
     const section = document.getElementById("Apropos");
     const rect = section.getBoundingClientRect();
+    const checkbox = document.getElementById("darkmode");
 
-    if (rect.top <= 0) {
-      header.classList.add("barreheader2");
+    if (checkbox.checked === false) {
+      if (rect.top <= 0) {
+        header.classList.add("barreheader2");
+      } else {
+        header.classList.remove("barreheader2");
+      }
     } else {
-      header.classList.remove("barreheader2");
+      header.classList.add("barreheader2");
     }
   });
 }
@@ -82,12 +87,67 @@ function navActive() {
   window.addEventListener("scroll", updateActivelink);
 }
 
+function survolNav() {
+  const liens = document.querySelectorAll("nav ul li");
+  const survol = document.querySelector(".survol");
+  const header = document.querySelector("nav");
+
+  liens.forEach((lien) => {
+    lien.addEventListener("mouseover", () => {
+      const rect2 = header.getBoundingClientRect();
+      const rect = lien.getBoundingClientRect();
+      survol.style.left = `${rect.left - rect2.left}px`;
+      survol.style.width = `${rect.width}px`;
+      survol.style.opacity = "1";
+    });
+
+    lien.addEventListener("mouseout", () => {
+      survol.style.opacity = "0";
+    });
+  });
+}
+
+function darkMode() {
+  const checkbox = document.getElementById("darkmode");
+  const root = document.documentElement;
+  const moon = document.querySelector(".fa-moon");
+  const sun = document.querySelector(".fa-sun");
+  const header = document.querySelector(".barreheader");
+  sun.style.display = "none";
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      sun.style.display = "block";
+      moon.style.display = "none";
+      header.classList.add("barreheader2");
+      root.style.setProperty("--blanc", "rgb(58, 58, 58)");
+      root.style.setProperty("--texte", "rgb(206, 206, 206)");
+      root.style.setProperty("--btnbackground", "#5a5a5a");
+      root.style.setProperty("--active", "#B1B1B1");
+      root.style.setProperty("--survol", "rgba(177, 177, 177, 0.5)");
+      root.style.setProperty("--ul", "rgba(146, 146, 146, 0.5)");
+    } else {
+      sun.style.display = "none";
+      moon.style.display = "flex";
+      header.classList.remove("barreheader2");
+      root.style.setProperty("--btnbackground", "rgb(255, 255, 255)");
+      root.style.setProperty("--blanc", "#f1f9f8");
+      root.style.setProperty("--texte", "#1c141f");
+      root.style.setProperty("--active", "rgba(112, 112, 112, 1)");
+      root.style.setProperty("--survol", "rgba(138, 138, 138, 0.5)");
+      root.style.setProperty("--ul", "rgba(112, 112, 112, 0.205)");
+    }
+  });
+}
+
 function main() {
+  darkMode();
   navActive();
   // smoothScroll();
   carouselDesc();
   headerScroll();
   btnMail();
+  survolNav();
 }
 
 document.addEventListener("DOMContentLoaded", main);
