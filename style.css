@@ -324,30 +324,32 @@ li a {
 .competences {
   display: flex;
   flex-direction: row;
-  gap: 80px;
-  height: 180px;
+  gap: 50px;
+  height: 150px;
+  width: 80%;
 }
 
 #html,
 #css,
-#js {
+#js,
+#fl,
+#pro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 180px;
+  width: 20%;
   height: 100%;
   background-color: var(--btnbackground);
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 #html:hover {
   i {
     color: #e54c21;
+    animation: floatvertical 2s ease-in-out infinite;
   }
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
@@ -355,8 +357,8 @@ li a {
 #css:hover {
   i {
     color: #2596be;
+    animation: floatvertical 2s ease-in-out infinite;
   }
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
@@ -364,15 +366,35 @@ li a {
 #js:hover {
   i {
     color: #f7df1d;
+    animation: floatvertical 2s ease-in-out infinite;
   }
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#fl:hover {
+  i {
+    color: #eb7c37;
+    animation: floatvertical 2s ease-in-out infinite;
+  }
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#pro:hover {
+  i {
+    color: #41234c;
+    animation: floatvertical 2s ease-in-out infinite;
+  }
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
 #html i,
 #css i,
-#js i {
+#js i,
+#fl i,
+#pro i {
   font-size: 5rem;
   color: var(--texte);
 }
@@ -433,7 +455,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   gap: 20px;
 }
 
@@ -522,13 +544,6 @@ h6 {
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 1);
 }
 
-#discord:hover {
-  i {
-    color: #5865f2;
-  }
-  box-shadow: 0px 0px 20px -5px rgba(88, 101, 242, 1);
-}
-
 #mail:hover {
   i {
     color: #54656d;
@@ -551,6 +566,33 @@ h6 {
 #mailcopie.ok {
   opacity: 1;
   transform: translateY(-20px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  gap: 10px;
+
+  label {
+    color: var(--texte);
+    display: flex;
+    justify-content: center;
+  }
+
+  input,
+  textarea {
+    background-color: var(--btnbackground);
+    box-shadow: 0px 0px 10px 5px rgba(46, 46, 46, 0.5);
+    border: none;
+    border-radius: 50px;
+    padding: 5px 20px;
+    color: var(--texte);
+    max-width: 100%;
+    max-height: 178px;
+  }
 }
 
 footer {
@@ -601,4 +643,19 @@ footer {
   100% {
     transform: translateY(0) rotate(0deg);
   }
+}
+@keyframes floatvertical {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1250px) {
 }
