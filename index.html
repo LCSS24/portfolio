@@ -1,180 +1,172 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucas Carpentier</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/f0e84571e0.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <video autoplay muted loop id="background-video">
-      <source src="media\background.webm" type="video/webm" />
-    </video>
-    <header>
-      <div class="barreheader">
-        <!-- <h1><a href="">LC.</a></h1> -->
-        <nav>
-          <ul>
-            <li><a href="#Apropos">A propos</a></li>
-            <li><a href="#mescompetences">Compétences</a></li>
-            <li><a href="#mesprojets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <div class="survol"></div>
-          </ul>
-        </nav>
-        <input type="checkbox" name="darkmode" id="darkmode" hidden />
-        <label for="darkmode"
-          ><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i
-        ></label>
-      </div>
-    </header>
-    <main>
-      <div class="hautdepage">
-        <h1>
-          Salut, je m'appelle <span>Lucas</span>, <br />
-          mais vous pouvez m'appeler <a href="#contact" class="ici">ici</a>
-        </h1>
-      </div>
-      <section id="Apropos">
-        <h2>Faisons connaissance</h2>
-        <p>Enchanté, Lucas Carpentier, 24 ans</p>
-        <div class="carouseldesc">
-          <div class="carousel">
-            <i class="fa-solid fa-arrow-left gauche"></i>
-            <div class="imgcontainer">
-              <img src="media\moipro.jpg" alt="" id="1" class="active" />
-              <img src="media\moiconcert.PNG" alt="" id="2" />
-            </div>
-            <i class="fa-solid fa-arrow-right droite"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Carpentier</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/f0e84571e0.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="media\background.webm" type="video/webm" />
+  </video>
+  <header>
+    <div class="barreheader">
+      <!-- <h1><a href="">LC.</a></h1> -->
+      <nav>
+        <ul>
+          <li><a href="#Apropos">A propos</a></li>
+          <li><a href="#mescompetences">Compétences</a></li>
+          <li><a href="#mesprojets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="survol"></div>
+        </ul>
+      </nav>
+      <input type="checkbox" name="darkmode" id="darkmode" hidden />
+      <label for="darkmode"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></label>
+    </div>
+  </header>
+  <main>
+    <div class="hautdepage">
+      <h1>
+        Salut, je m'appelle <span>Lucas</span>, <br />
+        mais vous pouvez m'appeler <a href="#contact" class="ici">ici</a>
+      </h1>
+    </div>
+    <section id="Apropos">
+      <h2>Faisons connaissance</h2>
+      <p>Enchanté, Lucas Carpentier, 24 ans</p>
+      <div class="carouseldesc">
+        <div class="carousel">
+          <i class="fa-solid fa-arrow-left gauche"></i>
+          <div class="imgcontainer">
+            <img src="media\moipro.webp" alt="" id="1" class="active" />
+            <img src="media\moiconcert.webp" alt="" id="2" />
           </div>
-          <div class="description descactive" id="desc1">
-            <h3>Développeur Web</h3>
-            <p>
-              Actuellement en formation au GRETA pour obtenir un Titre
-              Professionnel de Développeur Web et Web Mobile, j’ai développé une
-              véritable passion pour ce domaine.
-              <br />
-              Passant mes journées sur un ordinateur depuis mon plus jeune âge,
-              ça aide.
-            </p>
-          </div>
-          <div class="description" id="desc2">
-            <h3>Artiste</h3>
-            <p>
-              Passionné de musique, je compose et chante depuis maintenant sept
-              ans.
-              <br />
-              J’utilise FL Studio pour produire, mixer et masteriser mes
-              morceaux.
-            </p>
-          </div>
+          <i class="fa-solid fa-arrow-right droite"></i>
         </div>
-      </section>
-      <section id="mescompetences">
-        <h4>Mes compétences</h4>
-        <div class="competences">
-          <div id="html">
-            <i class="fa-brands fa-html5"></i>
-            <p>HTML</p>
-          </div>
-          <div id="css">
-            <i class="fa-brands fa-css3-alt"></i>
-            <p>CSS</p>
-          </div>
-          <div id="js">
-            <i class="fa-brands fa-square-js"></i>
-            <p>JavaScript</p>
-          </div>
-          <div id="fl">
-            <i class="fa-solid fa-carrot"></i>
-            <p>FL Studio</p>
-          </div>
-          <div id="pro">
-            <i class="fa-solid fa-clapperboard"></i>
-            <p>Adobe Premiere Pro</p>
-          </div>
+        <div class="description descactive" id="desc1">
+          <h3>Développeur Web</h3>
+          <p>
+            Actuellement en formation au GRETA pour obtenir un Titre
+            Professionnel de Développeur Web et Web Mobile, j’ai développé une
+            véritable passion pour ce domaine.
+            <br />
+            Passant mes journées sur un ordinateur depuis mon plus jeune âge,
+            ça aide.
+          </p>
         </div>
-      </section>
-      <section id="mesprojets">
-        <h4>Mes projets</h4>
-        <div class="gallery">
-          <a href="https://lcss24.github.io/NextBeat/" target="_blank">
-            <article id="nextbeat" class="article">
-              <img src="media\nextbeat.PNG" alt="" />
-              <div class="contenu_nb">
+        <div class="description" id="desc2">
+          <h3>Artiste</h3>
+          <p>
+            Passionné de musique, je compose et chante depuis maintenant sept
+            ans.
+            <br />
+            J’utilise FL Studio pour produire, mixer et masteriser mes
+            morceaux.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="mescompetences">
+      <h4>Mes compétences</h4>
+      <div class="competences">
+        <div id="html">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </div>
+        <div id="css">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </div>
+        <div id="js">
+          <i class="fa-brands fa-square-js"></i>
+          <p>JavaScript</p>
+        </div>
+        <div id="fl">
+          <i class="fa-solid fa-carrot"></i>
+          <p>FL Studio</p>
+        </div>
+        <div id="pro">
+          <i class="fa-solid fa-clapperboard"></i>
+          <p>Adobe Premiere Pro</p>
+        </div>
+      </div>
+    </section>
+    <section id="mesprojets">
+      <h4>Mes projets</h4>
+      <div class="gallery">
+        <a href="https://lcss24.github.io/NextBeat/" target="_blank">
+          <article id="nextbeat" class="article">
+            <img src="media\nextbeat.webp" alt="" />
+            <div class="contenu_nb">
+              <div class="titre_comp">
                 <h5>Next Beat</h5>
-                <p>
-                  Un "tinder-like" pour donner son avis sur des artistes en
-                  cliquant sur "j'aime" ou "je n'aime pas", connecté à l'API
-                  Spotify.
-                </p>
+                <div class="logos">
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-square-js"></i>
+                </div>
               </div>
-            </article>
-          </a>
-          <a href="#mesprojets">
-            <article id="sitetiff" class="article">
-              <img src="media\tiffanysart.PNG" alt="" />
-              <div class="contenu_nb">
-                <h5>Tiffany's Art</h5>
-                <p>Site vitrine pour une photographe (WIP)</p>
-              </div>
-            </article>
-          </a>
-        </div>
-      </section>
-      <section id="contact">
-        <h6>Ça vous a plu ?</h6>
-        <a
-          href="media\CV FEVRIER 2025.pdf"
-          class="btndownload"
-          target="_blank"
-          download=""
-          ><i class="fa-solid fa-circle-down"></i>Téléchargez mon CV</a
-        >
-        <p>et rentrons en contact</p>
+              <p>
+                Un "tinder-like" pour donner son avis sur des artistes en
+                cliquant sur "j'aime" ou "je n'aime pas", connecté à l'API
+                Spotify.
+              </p>
+            </div>
+          </article>
+        </a>
+        <a href="#mesprojets">
+          <article id="sitetiff" class="article">
+            <img src="media\tiffanysart.webp" alt="" />
+            <div class="contenu_nb">
+              <h5>Tiffany's Art</h5>
+              <p>Site vitrine pour une photographe (WIP)</p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+    <section id="contact">
+      <h6>Ça vous a plu ?</h6>
+      <a href="media\CV FEVRIER 2025.pdf" class="btndownload" target="_blank" download=""><i
+          class="fa-solid fa-circle-down"></i>Téléchargez mon CV</a>
+      <p>et rentrons en contact</p>
 
-        <form action="mailto:lucas.carpentier24@gmail.com">
-          <label for="nom">Nom</label>
-          <input type="text" name="nom" id="nom" placeholder="Votre nom" />
-          <label for="mailform">E-mail</label>
-          <input type="email" name="mailform" placeholder="Votre e-mail" />
-          <label for="message">Message</label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Votre message"
-          ></textarea>
-          <input type="submit" value="Envoyer" />
-        </form>
+      <form action="">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom" placeholder="Votre nom" />
+        <label for="mailform">E-mail</label>
+        <input type="email" name="mailform" placeholder="Votre e-mail" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" placeholder="Votre message"></textarea>
+        <input id="btnenvoyer" type="submit" value="Envoyer" />
+      </form>
 
-        <div class="reseaux">
-          <a
-            id="lkdin"
-            href="https://fr.linkedin.com/in/lucascarpentier24"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i>
-            <p>LinkedIn</p>
-          </a>
-          <a id="github" href="https://github.com/LCSS24" target="_blank">
-            <i class="fa-brands fa-github"></i>
-            <p>Github</p>
-          </a>
-          <button id="mail" value="lucas.carpentier24@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            <p>Mail</p>
-          </button>
-          <p id="mailcopie">Copié dans le presse papier !</p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <a href="#Apropos"><i class="fa-solid fa-arrow-up"></i></a>
-      <p>© Copyright 2025 - Lucas CARPENTIER. Tous droits réservés.</p>
-    </footer>
-  </body>
+      <div class="reseaux">
+        <a id="lkdin" href="https://fr.linkedin.com/in/lucascarpentier24" target="_blank"><i
+            class="fa-brands fa-linkedin"></i>
+          <p>LinkedIn</p>
+        </a>
+        <a id="github" href="https://github.com/LCSS24" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <p>Github</p>
+        </a>
+        <a id="mail">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Mail</p>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="#Apropos"><i class="fa-solid fa-arrow-up"></i></a>
+    <p>© Copyright 2025 - Lucas CARPENTIER. Tous droits réservés.</p>
+  </footer>
+</body>
+
 </html>

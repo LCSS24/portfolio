@@ -1,3 +1,5 @@
+const mailencodé = window.btoa("lucas.carpentier24@gmail.com")
+
 function headerScroll() {
   document.addEventListener("scroll", function () {
     const header = document.querySelector(".barreheader");
@@ -39,21 +41,16 @@ function carouselDesc() {
   });
 }
 
-async function btnMail() {
+function btnMail() {
   const btn = document.getElementById("mail");
+  btn.href = `mailto:${mailencodé}`;
   btn.addEventListener("click", () => {
-    navigator.clipboard.writeText(btn.value);
-    afficherMessage();
+    btn.href = `mailto:${atob(mailencodé)}`;
+    setTimeout(() => {
+      btn.href = ""
+    }, 100);
+
   });
-}
-
-function afficherMessage() {
-  const message = document.getElementById("mailcopie");
-  message.classList.add("ok");
-
-  setTimeout(() => {
-    message.classList.remove("ok");
-  }, 2000);
 }
 
 // function smoothScroll() {
@@ -77,7 +74,7 @@ function navActive() {
   function updateActivelink() {
     let index = sections.length;
 
-    while (--index >= 0 && window.scrollY + 100 < sections[index].offsetTop) {}
+    while (--index >= 0 && window.scrollY + 100 < sections[index].offsetTop) { }
 
     navLinks.forEach((link) => link.classList.remove("active"));
     if (index >= 0) {
